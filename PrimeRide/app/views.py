@@ -48,7 +48,7 @@ def register():
 		otp_num = random.randint(1000,9999)
 		hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
 		user = users(username = form.username.data,name = form.name.data,gender = form.gender.data,phoneNo = form.phoneNo.data,dob = form.dob.data,
-		email = form.email.data,govtid = form.govtId.data,password = hashed_password,otpuser=otp_num)
+			email = form.email.data,govtid = form.govtId.data,password = hashed_password,otpuser=otp_num)
 		email = form.email.data
 		user_name= form.username.data
 		token = s.dumps(email, salt='email-confirm')
